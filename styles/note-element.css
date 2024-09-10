@@ -1,0 +1,55 @@
+.note {
+	padding: 10px;
+	text-align: left;
+	background-color: #fff;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+	border-radius: 12px;
+	margin-bottom: 16px;
+	position: relative;
+	border: 1px solid transparent;
+	word-wrap: break-word;
+}
+
+.note-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.note-footer {
+	font-weight: 400;
+	font-size: 12px;
+}
+
+.note-content {
+	margin: 8px 0px;
+	font-weight: 400;
+}
+
+.note-buttons {
+	display: flex;
+	gap: 8px;
+}
+
+.note-buttons button {
+	padding: 10px 10px;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: color 0.3s;
+	background-color: transparent;
+}
+
+.edit-button {
+	background-image: url("../assets/edit_note-icon.svg");
+}
+
+.delete-button {
+	background-image: url("../assets/delete-icon.svg");
+}
+
+#current-date {
+	font-size: 14px;
+	font-weight: 300;
+}

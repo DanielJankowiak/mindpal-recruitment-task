@@ -1,0 +1,36 @@
+.add-note-container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	padding: 20px 0px;
+	gap: 16px;
+}
+
+.add-note {
+	text-align: left;
+	background-color: #ffffff;
+	padding: 8px 12px;
+	border: 1px solid transparent;
+	border-radius: 12px;
+}
+
+#text-area {
+	resize: vertical;
+	min-height: 200px;
+}
+
+.add-note:focus {
+	border: 1px solid #1b1c1e;
+}
+
+.add-note-button {
+	position: absolute;
+	min-width: 60px;
+	max-width: 60px;
+	bottom: 32px;
+	right: 16px;
+}
+
+.edit-mode {
+	resize: vertical;
+}
