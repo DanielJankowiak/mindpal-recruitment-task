@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				currentEditIndex = -1;
 			}
 
-			displayNotes(notes);
+			displayAllNotes();
 		}
 	});
 
@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	deleteModalButton.addEventListener("click", () => {
 		modalOverlay.classList.remove("show");
 		notes.splice(currentDeleteIndex, 1);
-		displayNotes(notes);
+		displayAllNotes();
 		if (notes.length === 0) {
 			emptyStateContainer.style.display = "flex";
 			noteEditor.style.display = "none";
@@ -177,6 +177,15 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	});
 
+	function restoreAllNotes() {
+		searchInput.value = "";
+		displayNotes(notes);
+	}
+
+	function displayAllNotes() {
+		displayNotes(notes);
+	}
+
 	function searchNotes() {
 		const searchQuery = searchInput.value.toLowerCase();
 		const filteredNotes = notes.filter(
@@ -189,4 +198,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	textArea.addEventListener("input", toggleButtonVisibility);
 	searchInput.addEventListener("input", searchNotes);
+	searchInput.addEventListener("blur", restoreAllNotes);
 });
